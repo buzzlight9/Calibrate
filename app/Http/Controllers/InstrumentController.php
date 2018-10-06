@@ -111,6 +111,7 @@ class InstrumentController extends Controller
         $instrument->client = $request->client;
         $instrument->constant = $request->constant;
         $instrument->calibrated = $request->calibrated;
+        $instrument->due = $request->due;
         $instrument->receipt = $request->receipt;
 
         $instrument->save();

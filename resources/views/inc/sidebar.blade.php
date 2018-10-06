@@ -23,6 +23,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('instruments.index') }}"><i class="fa fa-circle-o"></i>Instruments</a></li>
+            <li><a href="{{ route('instruments.index') }}"><i class="fa fa-circle-o"></i>Calibration</a></li>
           </ul>
         </li>
         <li>

@@ -37,6 +37,10 @@
                                                 <label>Receipt No</label>
                                                 <input type="number" name="receipt" class="form-control" id="receipt" placeholder="Receipt No" value="{{$instrument->receipt}}" autofocus>
                                             </div>
+                                            <div class="form-group">
+                                                    <label>Due Date</label>
+                                                    <input type="date" name="due" class="form-control" id="due" placeholder="" value="{{$instrument->due}}" autofocus>
+                                                </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">

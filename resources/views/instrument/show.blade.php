@@ -29,6 +29,7 @@
           <div class="box box-info">
             <div class="box-header">
               <h3 class="box-title">Instrument Data</h3>
+              {{date("Y-m-d")}}
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -44,6 +45,7 @@
                   <th>Additive Constant</th>
                   <th>Date Calibrated</th>
                   <th>Receipt No</th>
+                  <th>Notification</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
@@ -60,6 +62,12 @@
                   <td>{{$instrument->constant}}</td>
                   <td>{{$instrument->calibrated}}</td>
                   <td>{{$instrument->receipt}}</td>
+                  <td>
+                    @if($instrument->due != date("Y-m-d"))
+                        @else
+                        <span style="background-color:yellow">Calibration Due</span>
+                    @endif
+                  </td>
                   <td><a href="{{route('instruments.edit',$instrument->id)}}"><span class="glyphicon glyphicon-edit"></span></a></td>
                   <td>
                   <form id="delete-form-{{$instrument->id}}" action="{{route('instruments.destroy',$instrument->id)}}" method="post" style="display:none">
@@ -93,6 +101,7 @@
                     <th>Additive Constant</th>
                     <th>Date Calibrated</th>
                     <th>Receipt No</th>
+                    <th>Notification</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
