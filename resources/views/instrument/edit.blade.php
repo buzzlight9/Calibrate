@@ -23,41 +23,41 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="title">Instrument Type</label>
-                                                <input type="text" name="type" class="form-control" id="type" placeholder="Type" value="{{$instrument->type}}" autofocus>
+                                                <input type="text" name="type" class="form-control" id="type" placeholder="Type" value="{{$instrument->type}}" autofocus required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="title">Model</label>
-                                                <input type="text" name="model" class="form-control" id="model" placeholder="Model" value="{{$instrument->model}}" autofocus>
+                                                <input type="text" name="model" class="form-control" id="model" placeholder="Model" value="{{$instrument->model}}" autofocus required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Serial No</label>
-                                                <input type="number" name="serial" class="form-control" id="serial" placeholder="Serial No" value="{{$instrument->serial}}" autofocus>
+                                                <input type="number" name="serial" class="form-control" id="serial" placeholder="Serial No" value="{{$instrument->serial}}" autofocus required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Receipt No</label>
-                                                <input type="number" name="receipt" class="form-control" id="receipt" placeholder="Receipt No" value="{{$instrument->receipt}}" autofocus>
+                                                <input type="number" name="receipt" class="form-control" id="receipt" placeholder="Receipt No" value="{{$instrument->receipt}}" autofocus required>
                                             </div>
                                             <div class="form-group">
-                                                    <label>Due Date</label>
-                                                    <input type="date" name="due" class="form-control" id="due" placeholder="" value="{{$instrument->due}}" autofocus>
+                                                    <label>Calibration Due Date</label>
+                                                    <input type="date" name="due" class="form-control" id="due" placeholder="" value="{{$instrument->due}}" autofocus required>
                                                 </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="title">Brand</label>
-                                                <input type="text" name="brand" class="form-control" id="brand" placeholder="Brand" value="{{$instrument->brand}}" autofocus>
+                                                <input type="text" name="brand" class="form-control" id="brand" placeholder="Brand" value="{{$instrument->brand}}" autofocus required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Client Name</label>
-                                                <input type="text" name="client" class="form-control" id="client" placeholder="Client Name" value="{{$instrument->client}}" autofocus>
+                                                <input type="text" name="client" class="form-control" id="client" placeholder="Client Name" value="{{$instrument->client}}" autofocus required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Additive Constant</label>
-                                                <input type="text" name="constant" class="form-control" id="constant" placeholder="Additive Constant" value="{{$instrument->constant}}" autofocus>
+                                                <input type="text" name="constant" class="form-control" id="constant" placeholder="Additive Constant" value="{{$instrument->constant}}" autofocus required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Date Calibrated</label>
-                                                <input type="date" name="calibrated" class="form-control" id="calibrated" placeholder="" value="{{$instrument->calibrated}}" autofocus>
+                                                <input type="date" name="calibrated" class="form-control" id="calibrated" placeholder="" value="{{$instrument->calibrated}}" autofocus required>
                                             </div>
                                         </div>
                                     </div>

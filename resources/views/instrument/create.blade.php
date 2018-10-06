@@ -22,25 +22,25 @@
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="title">Instrument Type</label>
-                                                <input type="text" name="type" class="form-control" id="type" placeholder="Type" autofocus>
+                                                <input type="text" name="type" class="form-control" id="type" placeholder="Type" autofocus required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="title">Model</label>
-                                                <input type="text" name="model" class="form-control" id="model" placeholder="Model" autofocus>
+                                                <input type="text" name="model" class="form-control" id="model" placeholder="Model" autofocus required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Serial No</label>
-                                                <input type="number" name="serial" class="form-control" id="serial" placeholder="Serial No" autofocus>
+                                                <input type="number" name="serial" class="form-control" id="serial" placeholder="Serial No" autofocus required>
                                             </div>
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label for="title">Brand</label>
-                                                <input type="text" name="brand" class="form-control" id="brand" placeholder="Brand" autofocus>
+                                                <input type="text" name="brand" class="form-control" id="brand" placeholder="Brand" autofocus required>
                                             </div>
                                             <div class="form-group">
                                                 <label>Client Name</label>
-                                                <input type="text" name="client" class="form-control" id="client" placeholder="Client Name" autofocus>
+                                                <input type="text" name="client" class="form-control" id="client" placeholder="Client Name" autofocus required>
                                             </div>
                                         </div>
                                     </div>
