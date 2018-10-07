@@ -37,6 +37,11 @@
         <!-- /.col -->
         <div class="col-md-8 col-sm-6 col-sx-12">
           <div class="box">
+                @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
+            @endif
             <div class="box-header">
                 <form role="form" action="{{ route('instruments.store') }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
