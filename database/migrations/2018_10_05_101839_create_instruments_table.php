@@ -20,7 +20,7 @@ class CreateInstrumentsTable extends Migration
             $table->string('model');
             $table->integer('serial');
             $table->string('client');
-            $table->decimal('constant',5,2);
+            $table->double('constant',5,2);
             $table->date('calibrated');
             $table->integer('receipt');
             $table->timestamps();
