@@ -18,11 +18,12 @@ class CreateInstrumentsTable extends Migration
             $table->string('type');
             $table->string('brand');
             $table->string('model');
-            $table->integer('serial');
+            $table->integer('serial',32)->nulluable();
             $table->string('client');
-            $table->double('constant',5,2);
-            $table->date('calibrated');
-            $table->integer('receipt');
+            $table->double('constant')->nullable();
+            $table->date('calibrated')->nullable();
+            $table->date('due')->nullable();
+            $table->integer('receipt',32)->nullable();
             $table->timestamps();
         });
     }
