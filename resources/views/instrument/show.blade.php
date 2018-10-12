@@ -63,9 +63,10 @@
                   <td>{{$instrument->calibrated}}</td>
                   <td>{{$instrument->receipt}}</td>
                   <td>
-                    @if($instrument->due !=  date("Y-m-d")) 
+                    @if($instrument->due ==  date("Y-m-d"))
+                    <span style="background-color:yellow">Calibration Due</span>
                       @else
-                      <span style="background-color:yellow">Calibration Due</span>
+                      
                     @endif
                   </td>
                   <td><a href="{{route('instruments.edit',$instrument->id)}}"><span class="glyphicon glyphicon-edit"></span></a></td>

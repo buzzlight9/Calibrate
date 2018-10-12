@@ -18,12 +18,12 @@ class CreateInstrumentsTable extends Migration
             $table->string('type');
             $table->string('brand');
             $table->string('model');
-            $table->double('serial');
+            $table->interger('serial')->unsigned();
             $table->string('client');
             $table->double('constant');
             $table->date('calibrated');
             $table->date('due');
-            $table->double('receipt');
+            $table->integer('receipt')->unsigned();
             $table->timestamps();
         });
     }
