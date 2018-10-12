@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section("head")
-  <title>Calibration | Login</title>
+  <title>Calibrate | Login</title>
 @endsection
 @section('loginContent')
 <div class="login-box">
