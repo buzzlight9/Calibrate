@@ -32,6 +32,15 @@
         @endif
       </div>
       <div class="form-group has-feedback">
+          <input id="usertype" type="text" class="form-control{{ $errors->has('usertype') ? ' is-invalid' : '' }}" placeholder="Role Type" name="usertype" value="{{ old('usertype') }}" required autofocus>
+      <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      @if ($errors->has('usertype'))
+          <span class="invalid-feedback" role="alert">
+              <strong>{{ $errors->first('usertype') }}</strong>
+          </span>
+      @endif
+    </div>
+      <div class="form-group has-feedback">
             <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Password" name="password" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         @if ($errors->has('password'))
