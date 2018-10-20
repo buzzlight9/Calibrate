@@ -46,7 +46,6 @@
                   <th>Date Calibrated</th>
                   <th>Receipt No</th>
                   <th>Due Date</th>
-                  <th>Documents</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
@@ -70,7 +69,6 @@
                       
                     @endif
                   </td>
-                  <td>DOCS</td>
                   <td><a href="{{route('instruments.edit',$instrument->id)}}"><span class="glyphicon glyphicon-edit"></span></a></td>
                   <td>
                   <form id="delete-form-{{$instrument->id}}" action="{{route('instruments.destroy',$instrument->id)}}" method="post" style="display:none">
@@ -105,7 +103,6 @@
                     <th>Date Calibrated</th>
                     <th>Receipt No</th>
                     <th>Due Date</th>
-                    <th>Documents</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
