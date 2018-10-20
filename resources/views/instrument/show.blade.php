@@ -45,7 +45,8 @@
                   <th>Additive Constant</th>
                   <th>Date Calibrated</th>
                   <th>Receipt No</th>
-                  <th>Notification</th>
+                  <th>Due Date</th>
+                  <th>Documents</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
@@ -62,13 +63,14 @@
                   <td>{{$instrument->constant}}</td>
                   <td>{{$instrument->calibrated}}</td>
                   <td>{{$instrument->receipt}}</td>
-                  <td>
-                    @if($instrument->due ==  date("Y-m-d"))
-                    <span style="background-color:yellow">Calibration Due</span>
+                  <td>{{$instrument->due}}
+                    @if($instrument->due == date("Y-m-d"))
+                      <span style="background-color:yellow">Due</span>
                       @else
                       
                     @endif
                   </td>
+                  <td>DOCS</td>
                   <td><a href="{{route('instruments.edit',$instrument->id)}}"><span class="glyphicon glyphicon-edit"></span></a></td>
                   <td>
                   <form id="delete-form-{{$instrument->id}}" action="{{route('instruments.destroy',$instrument->id)}}" method="post" style="display:none">
@@ -102,7 +104,8 @@
                     <th>Additive Constant</th>
                     <th>Date Calibrated</th>
                     <th>Receipt No</th>
-                    <th>Notification</th>
+                    <th>Due Date</th>
+                    <th>Documents</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
