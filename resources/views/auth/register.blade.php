@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section("head")
-  <title>Pulsar | Register</title>
+  <title>Calibrate | Register</title>
 @endsection
 @section('loginContent')
 <div class="login-box">
   <div class="login-logo">
-    <a href=""><b>Pulsar</b> REGISTER</a>
+    <a href=""><b>Calibrate</b> REGISTER</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
