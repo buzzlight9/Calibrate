@@ -18,3 +18,4 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/instruments','InstrumentController');
+Route::get('/calibration','InstrumentController@due')->name('calibration');

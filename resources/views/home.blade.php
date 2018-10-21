@@ -26,6 +26,9 @@
                 <li class="list-group-item">
                   <b>Email</b> <a class="pull-right">{{(Auth::user()->email)}}</a>
                 </li>
+                <li class="list-group-item">
+                    <b>Role</b> <a class="pull-right">{{ucfirst((Auth::user()->user_type))}}</a>
+                </li>
               </ul>
 
               <a href="{{route('instruments.create')}}" class="btn btn-primary btn-block"><b>Add New Instrument Detail</b></a>

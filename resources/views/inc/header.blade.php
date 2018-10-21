@@ -22,7 +22,7 @@
               @else
                 
               @endif
-            <span class="hidden-xs">{{(Auth::user()->name)}}</span>
+            <span class="hidden-xs">Hello {{ucfirst((Auth::user()->name))}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -30,20 +30,20 @@
                 <img src="/admin/dist/img/avatar.png" class="img-circle" alt="User Image">
 
                 <p>
-                  {{(Auth::user()->name)}} - Admin
+                    {{ucfirst((Auth::user()->name))}} - {{ucfirst((Auth::user()->user_type))}}
                   <small>Account Created On {{(Auth::user()->created_at->toFormattedDateString())}}</small>
                 </p>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                <a href="{{route('home')}}" class="btn btn-default btn-flat">Profile</a>
+                <a href="{{route('home')}}" class="btn btn-default btn-flat"><span style='color:green' class='glyphicon glyphicon-user'></span></a>
                 </div>
                 <div class="pull-right">
                   <a class="btn btn-default btn-flat" href="{{ route('logout') }}"
                   onclick="event.preventDefault();
                            document.getElementById('logout-form').submit();">
-                  Signout
+                    <span style='color:green' class='glyphicon glyphicon-off'></span>
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   {{ csrf_field() }}

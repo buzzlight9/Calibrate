@@ -66,8 +66,16 @@
                     <?php
                       $date = $instrument->due;
                       $dueDate = strtotime('-2 week' , strtotime($date));
-                      $dueDate = date("d-M-Y" , $dueDate);
-                      echo "<span style='background-color:yellow'>$dueDate</span>";
+                      $dueDate = date("Y-m-d" , $dueDate);
+                      if($dueDate == date("Y-m-d"))
+                      {
+                        echo "<span style='background-color:yellow'>Due</span>";
+                      }
+                      else
+                      {
+                          echo "<span style='color:green' class='glyphicon glyphicon-ok'></span>";
+                      }
+
                       
                     ?>
                   </td>

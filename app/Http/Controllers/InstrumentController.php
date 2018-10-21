@@ -24,6 +24,12 @@ class InstrumentController extends Controller
         return view('instrument.show',compact('instruments'));
     }
 
+    public function due()
+    {
+        $instruments = instrument::all();
+        return view('instrument.due',compact('instruments'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -8,7 +8,7 @@
           <img src="/admin/dist/img/avatar.png" class="img-circle" alt="User Image">-->
         </div>
         <div class="pull-left info">
-          <p>{{(Auth::user()->name)}}</p>
+          <p>{{ucfirst((Auth::user()->user_type))}}</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Active</a>
         </div>
       </div>
@@ -23,12 +23,13 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('instruments.index') }}"><i class="fa fa-circle-o"></i>Instruments</a></li>
+            <li><a href="{{ route('calibration') }}"><i class="fa fa-circle-o"></i>Calibrations Due</a></li>
             @can('isAdmin')
               <li><a href="{{ route('register') }}"><i class="fa fa-circle-o"></i>Create Users</a></li>
             @endcan
+            
           </ul>
         </li>
-        <li>
       </ul>
     </section><!-- /.sidebar -->
   </aside>
