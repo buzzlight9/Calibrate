@@ -19,3 +19,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/instruments','InstrumentController');
 Route::get('/calibration','InstrumentController@due')->name('calibration');
+Route::get('/users','HomeController@showUsers')->name('users');
