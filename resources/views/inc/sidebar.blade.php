@@ -25,8 +25,8 @@
             <li><a href="{{ route('instruments.index') }}"><i class="fa fa-circle-o"></i>Instruments</a></li>
             <li><a href="{{ route('calibration') }}"><i class="fa fa-circle-o"></i>Calibrations Due</a></li>
             @can('isAdmin')
-              <li><a href="{{ route('register') }}"><i class="fa fa-circle-o"></i>Create Users</a></li>
               <li><a href="{{ route('users') }}"><i class="fa fa-circle-o"></i>Users</a></li>
+              <li><a href="{{ route('register') }}"><i class="fa fa-circle-o"></i>Create Users</a></li>
             @endcan
             
           </ul>

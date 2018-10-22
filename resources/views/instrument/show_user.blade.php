@@ -8,7 +8,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        INSTRUMENTS DETAILS
+        Users
       </h1>
     </section>
 
@@ -18,7 +18,7 @@
       <!-- Default box -->
       <div class="box box-info">
         <div class="box-header with-border">
-        <a href="{{route('instruments.create')}}" class="btn btn-primary col-md-offset-5">New Instrument Details</a>
+        <a href="{{route('register')}}" class="btn btn-primary col-md-offset-5">Create New Users</a>
         <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                     title="Collapse">
@@ -40,8 +40,8 @@
                   <th>Name</th>
                   <th>Email</th>
                   <th>Role</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
+                  {{--<th>Edit</th>
+                  <th>Delete</th>--}}
                 </tr>
                 </thead>
                 <tbody>
@@ -51,9 +51,9 @@
                   <td>{{$user->name}}</td>
                   <td>{{$user->email}}</td>
                   <td>{{$user->user_type}}</td>
-                  <td><a href="{{--{{route('instruments.edit',$instrument->id)}}--}}"><span class="glyphicon glyphicon-edit"></span></a></td>
-                  <td>
-                  <form id="delete-form-{{--{{$instrument->id}}--}}" action="{{--{{route('instruments.destroy',$instrument->id)}}--}}" method="post" style="display:none">
+                  {{--<td><a href="{{route('instruments.edit',$instrument->id)}}"><span class="glyphicon glyphicon-edit"></span></a></td>--}}
+                  {{--<td>--}}
+                  {{--<form id="delete-form-{{$instrument->id}}" action="{{route('instruments.destroy',$instrument->id)}}" method="post" style="display:none">
                     {{csrf_field()}}
                     {{method_field('DELETE')}}
                   </form>
@@ -61,13 +61,13 @@
                   if(confirm('Are you sure, You Want to delete this?'))
                       {
                         event.preventDefault();
-                        document.getElementById('delete-form-{{--{{ $instrument->id }}--}}').submit();
+                        document.getElementById('delete-form-{{ $instrument->id }}').submit();
                       }
                       else{
                         event.preventDefault();
                       }" data-toggle="modal" data-target="#exampleModalCenter"><span class="glyphicon glyphicon-trash"  ></span>
                     
-                  </a>
+                  </a>--}}
                   
                 </tr>
                
@@ -79,8 +79,8 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Role</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    {{--<th>Edit</th>
+                    <th>Delete</th>--}}
                 </tr>
                 </tfoot>
               </table>

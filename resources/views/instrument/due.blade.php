@@ -67,7 +67,7 @@
                       $date = $instrument->due;
                       $dueDate = strtotime('-2 week' , strtotime($date));
                       $dueDate = date("Y-m-d" , $dueDate);
-                      if($dueDate == date("Y-m-d"))
+                      if($dueDate == date("Y-m-d") || date("Y-m-d") > $dueDate)
                       {
                         echo "<span style='background-color:yellow'>Due</span>";
                       }

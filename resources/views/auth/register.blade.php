@@ -9,7 +9,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Register New User</p>
+    <p class="login-box-msg">Register A New User</p>
 
     <form method="POST" action="{{ route('register') }}">
         @csrf
