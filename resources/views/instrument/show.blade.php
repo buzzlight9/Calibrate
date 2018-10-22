@@ -29,7 +29,6 @@
           <div class="box box-info">
             <div class="box-header">
               <h3 class="box-title">Instrument Data</h3>
-              {{date("Y-m-d")}}
             </div>
             <!-- /.box-header -->
             <div class="box-body">

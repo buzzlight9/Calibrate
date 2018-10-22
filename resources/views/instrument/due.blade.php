@@ -8,7 +8,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        INSTRUMENTS DETAILS
+        CALIBRATIONS DUE
       </h1>
     </section>
 
@@ -29,7 +29,6 @@
           <div class="box box-info">
             <div class="box-header">
               <h3 class="box-title">Instrument Data</h3>
-              {{date("Y-m-d")}}
             </div>
             <!-- /.box-header -->
             <div class="box-body">
