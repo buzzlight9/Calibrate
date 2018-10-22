@@ -68,7 +68,7 @@
                       $dueDate = date("Y-m-d" , $dueDate);
                       if($dueDate == date("Y-m-d") || $dueDate < date("Y-m-d"))
                       {
-                        echo "<span style='color:red;background-color:yellow' class='glyphicon glyphicon-remove'> DUE</span>";
+                        echo "<span style='color:red' class='glyphicon glyphicon-remove'> DUE</span>";
                       }
                       else
                       {
