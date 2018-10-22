@@ -16,14 +16,14 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="active treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Equipment Details</span>
+            <i class="glyphicon glyphicon-cog"></i> <span>Equipment Details</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ route('instruments.index') }}"><i class="fa fa-circle-o"></i>Instruments</a></li>
-            <li><a href="{{ route('calibration') }}"><i class="fa fa-circle-o"></i>Calibrations Due</a></li>
+            <li><a href="{{ route('instruments.index') }}"><i class="glyphicon glyphicon-triangle-right"></i>Instruments</a></li>
+            <li><a href="{{ route('calibration') }}"><i class="glyphicon glyphicon-triangle-right"></i>Calibrations Due</a></li>
             @can('isAdmin')
               <li><a href="{{ route('users') }}"><i class="fa fa-circle-o"></i>Users</a></li>
               <li><a href="{{ route('register') }}"><i class="fa fa-circle-o"></i>Create Users</a></li>

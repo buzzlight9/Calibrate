@@ -42,7 +42,6 @@
                   <th>Serial No</th>
                   <th>Client</th>
                   <th>Additive Constant</th>
-                  <th>Date Calibrated</th>
                   <th>Receipt No</th>
                   <th>Due Date</th>
                   <th>Edit</th>
@@ -52,24 +51,15 @@
                 <tbody>
                 @foreach($instruments as $instrument)
                 <tr>
-                  <td>{{$loop->index + 1}} </td>
-                  <td>{{$instrument->type}}</td>
-                  <td>{{$instrument->brand}}</td>
-                  <td>{{$instrument->model}}</td>
-                  <td>{{$instrument->serial}}</td>
-                  <td>{{$instrument->client}}</td>
-                  <td>{{$instrument->constant}}</td>
-                  <td>{{$instrument->calibrated}}</td>
-                  <td>{{$instrument->receipt}}</td>
-                  <td style='background-color:lightblue'>
-                    <?php
-                      $date = $instrument->due;
-                      $dueDate = strtotime('-2 week' , strtotime($date));
-                      $dueDate = date("d-M-Y" , $dueDate);
-                      echo "<span style='color:black'>$dueDate</span>";
-                      
-                    ?>
-                  </td>
+                  <td style="background-color:lightgrey">{{$loop->index + 1}} </td>
+                  <td style="background-color: #6CCBEF">{{$instrument->type}}</td>
+                  <td style="background-color:lightgrey">{{$instrument->brand}}</td>
+                  <td style="background-color: #6CCBEF">{{$instrument->model}}</td>
+                  <td style="background-color:lightgrey">{{$instrument->serial}}</td>
+                  <td style="background-color: #6CCBEF">{{$instrument->client}}</td>
+                  <td style="background-color:lightgrey">{{$instrument->constant}}</td>
+                  <td style="background-color: #6CCBEF">{{$instrument->receipt}}</td>
+                  <td style="background-color:lightgrey">{{$instrument->due}}</td>
                   <td><a href="{{route('instruments.edit',$instrument->id)}}"><span class="glyphicon glyphicon-edit"></span></a></td>
                   <td>
                   <form id="delete-form-{{$instrument->id}}" action="{{route('instruments.destroy',$instrument->id)}}" method="post" style="display:none">
@@ -101,7 +91,6 @@
                     <th>Serial No</th>
                     <th>Client</th>
                     <th>Additive Constant</th>
-                    <th>Date Calibrated</th>
                     <th>Receipt No</th>
                     <th>Due Date</th>
                     <th>Edit</th>

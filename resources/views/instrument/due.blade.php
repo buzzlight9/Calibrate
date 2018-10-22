@@ -52,30 +52,28 @@
                 <tbody>
                 @foreach($instruments as $instrument)
                 <tr>
-                  <td>{{$loop->index + 1}} </td>
-                  <td>{{$instrument->type}}</td>
-                  <td>{{$instrument->brand}}</td>
-                  <td>{{$instrument->model}}</td>
-                  <td>{{$instrument->serial}}</td>
-                  <td>{{$instrument->client}}</td>
-                  <td>{{$instrument->constant}}</td>
-                  <td>{{$instrument->calibrated}}</td>
-                  <td>{{$instrument->receipt}}</td>
-                  <td>
+                  <td style="background-color:lightgrey">{{$loop->index + 1}} </td>
+                  <td style="background-color: #6CCBEF">{{$instrument->type}}</td>
+                  <td style="background-color:lightgrey">{{$instrument->brand}}</td>
+                  <td style="background-color: #6CCBEF">{{$instrument->model}}</td>
+                  <td style="background-color:lightgrey">{{$instrument->serial}}</td>
+                  <td style="background-color: #6CCBEF">{{$instrument->client}}</td>
+                  <td style="background-color:lightgrey">{{$instrument->constant}}</td>
+                  <td style="background-color: #6CCBEF">{{$instrument->calibrated}}</td>
+                  <td style="background-color:lightgrey">{{$instrument->receipt}}</td>
+                  <td style="background-color: #6CCBEF">
                     <?php
                       $date = $instrument->due;
                       $dueDate = strtotime('-2 week' , strtotime($date));
                       $dueDate = date("Y-m-d" , $dueDate);
-                      if($dueDate == date("Y-m-d") || date("Y-m-d") > $dueDate)
+                      if($dueDate == date("Y-m-d") || $dueDate < date("Y-m-d"))
                       {
-                        echo "<span style='background-color:yellow'>Due</span>";
+                        echo "<span style='color:red;background-color:yellow' class='glyphicon glyphicon-remove'> DUE</span>";
                       }
                       else
                       {
-                          echo "<span style='color:green' class='glyphicon glyphicon-ok'></span>";
+                          echo "<span style='color:green' class='glyphicon glyphicon-ok'> OK</span>";
                       }
-
-                      
                     ?>
                   </td>
                   <td><a href="{{route('instruments.edit',$instrument->id)}}"><span class="glyphicon glyphicon-edit"></span></a></td>

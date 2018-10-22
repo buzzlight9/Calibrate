@@ -22,7 +22,7 @@
               @else
                 
               @endif
-            <span class="hidden-xs">Hello {{ucfirst((Auth::user()->name))}}</span>
+            <span class="hidden-xs">Hello {{ucwords((Auth::user()->name))}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -30,7 +30,7 @@
                 <img src="/admin/dist/img/avatar.png" class="img-circle" alt="User Image">
 
                 <p>
-                    {{ucfirst((Auth::user()->name))}} - {{ucfirst((Auth::user()->user_type))}}
+                    {{ucwords((Auth::user()->name))}} - {{ucfirst((Auth::user()->user_type))}}
                   <small>Account Created On {{(Auth::user()->created_at->toFormattedDateString())}}</small>
                 </p>
               </li>
