@@ -62,12 +62,12 @@
                   <td>{{$instrument->constant}}</td>
                   <td>{{$instrument->calibrated}}</td>
                   <td>{{$instrument->receipt}}</td>
-                  <td>
+                  <td style='background-color:lightblue'>
                     <?php
                       $date = $instrument->due;
                       $dueDate = strtotime('-2 week' , strtotime($date));
                       $dueDate = date("d-M-Y" , $dueDate);
-                      echo "<span style='background-color:yellow'>$dueDate</span>";
+                      echo "<span style='color:black'>$dueDate</span>";
                       
                     ?>
                   </td>
