@@ -10,6 +10,8 @@
 <!-- Ionicons -->
 <link rel="stylesheet" href="{{asset('/admin/bower_components/Ionicons/css/ionicons.min.css')}}">
 <link rel="shortcut icon" href="{{asset('/user/img/pulsar20.png')}}" />
+<!--Custom CSS -->
+<link rel="stylesheet" href="{{asset('/admin/dist/css/custom.css')}}">
 <!-- Theme style -->
 <link rel="stylesheet" href="{{asset('/admin/dist/css/AdminLTE.min.css')}}">
 <!-- AdminLTE Skins. Choose a skin from the css/skins

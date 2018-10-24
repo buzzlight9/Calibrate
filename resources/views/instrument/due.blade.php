@@ -52,15 +52,15 @@
                 <tbody>
                 @foreach($instruments as $instrument)
                 <tr>
-                  <td style="background-color:lightgrey">{{$loop->index + 1}} </td>
-                  <td style="background-color: #6CCBEF">{{$instrument->type}}</td>
-                  <td style="background-color:lightgrey">{{$instrument->brand}}</td>
-                  <td style="background-color: #6CCBEF">{{$instrument->model}}</td>
-                  <td style="background-color:lightgrey">{{$instrument->serial}}</td>
-                  <td style="background-color: #6CCBEF">{{$instrument->client}}</td>
-                  <td style="background-color:lightgrey">{{$instrument->constant}}</td>
-                  <td style="background-color: #6CCBEF">{{$instrument->calibrated}}</td>
-                  <td style="background-color:lightgrey">{{$instrument->receipt}}</td>
+                  <td class="lightGrey">{{$loop->index + 1}} </td>
+                  <td class="lightBlue">{{$instrument->type}}</td>
+                  <td class="lightGrey">{{$instrument->brand}}</td>
+                  <td class="lightBlue">{{$instrument->model}}</td>
+                  <td class="lightGrey">{{$instrument->serial}}</td>
+                  <td class="lightBlue">{{$instrument->client}}</td>
+                  <td class="lightGrey">{{$instrument->constant}}</td>
+                  <td class="lightBlue">{{$instrument->calibrated}}</td>
+                  <td class="lightGrey">{{$instrument->receipt}}</td>
                   <td>
                     <?php
                       $date = $instrument->due;

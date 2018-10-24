@@ -43,10 +43,10 @@
                 <tbody>
                 @foreach($users as $user)
                 <tr>
-                  <td>{{$loop->index + 1}} </td>
-                  <td>{{$user->name}}</td>
-                  <td>{{$user->email}}</td>
-                  <td>{{$user->user_type}}</td>
+                  <td class="lightGrey">{{$loop->index + 1}} </td>
+                  <td class="lightBlue">{{$user->name}}</td>
+                  <td class="lightGrey">{{$user->email}}</td>
+                  <td class="lightBlue">{{$user->user_type}}</td>
                   {{--<td><a href="{{route('instruments.edit',$instrument->id)}}"><span class="glyphicon glyphicon-edit"></span></a></td>--}}
                   {{--<td>--}}
                   {{--<form id="delete-form-{{$instrument->id}}" action="{{route('instruments.destroy',$instrument->id)}}" method="post" style="display:none">
