@@ -1,10 +1,10 @@
 <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Web Design</b>: Fiji Web Solution
-    </div>
+  <div class="pull-right hidden-xs">
+    <b>Web Design</b>: Fiji Web Solution
+  </div>
     <strong>Copyright &copy; {{Carbon\carbon::now()->year}} <a href="/home">Calibration</a>.</strong> All rights
     reserved.
-  </footer>
+</footer>
   <script src="{{asset('/admin/bower_components/jquery/dist/jquery.min.js')}}"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="{{asset('/admin/bower_components/jquery-ui/jquery-ui.min.js')}}"></script>
@@ -14,21 +14,9 @@
 </script>
 <!-- Bootstrap 3.3.7 -->
 <script src="{{('/admin/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-<!-- Morris.js charts -->
-<script src="bower_components/raphael/raphael.min.js"></script>
-<script src="bower_components/morris.js/morris.min.js"></script>
-<!-- Sparkline -->
-<script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
 <script src="bower_components/moment/min/moment.min.js"></script>
 <script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<!-- CKeditor -->
-<script src="//cdn.ckeditor.com/4.10.0/full/ckeditor.js"></script>
 <!-- datepicker -->
 <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
@@ -43,13 +31,5 @@
 <script src="dist/js/pages/dashboard.js"></script>-->
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-
-<script>
-  $(function () {
-    // Replace the <textarea id="editor1"> with a CKEditor
-    // instance, using default configuration.
-    CKEDITOR.replace('editor1')
-  })
-</script>
   @section('footerSection')
     @show

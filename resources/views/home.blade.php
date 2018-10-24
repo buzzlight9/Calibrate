@@ -24,14 +24,15 @@
 
               <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
+                    <b>Name</b> <a class="pull-right">{{(Auth::user()->name)}}</a>
+                </li>
+                <li class="list-group-item">
                   <b>Email</b> <a class="pull-right">{{(Auth::user()->email)}}</a>
                 </li>
                 <li class="list-group-item">
                     <b>Role</b> <a class="pull-right">{{ucfirst((Auth::user()->user_type))}}</a>
                 </li>
               </ul>
-
-              <a href="{{route('instruments.create')}}" class="btn btn-primary btn-block"><b>Add New Instrument Detail</b></a>
             </div>
             <!-- /.box-body -->
           </div>
@@ -39,17 +40,18 @@
         </div>
         <!-- /.col -->
         <div class="col-md-8 col-sm-6 col-sx-12">
-          <div class="box">
-                @if (session('status'))
+          <div class="box box-info">
+            @if (session('status'))
                 <div class="alert alert-success" role="alert">
                     {{ session('status') }}
                 </div>
             @endif
             <div class="box-header">
+                <h3 class="text-center">Enter Instrument Detail</h3>
                 <form role="form" action="{{ route('instruments.store') }}" method="post" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="box-body">
-                        <div class="box box-info">
+                        <div class="box">
                             <div class="box-header">
                                 <div class="col-lg-6">
                                     <div class="form-group">

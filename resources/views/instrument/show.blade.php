@@ -18,6 +18,9 @@
       <!-- Default box -->
       <div class="box box-info">
         <div class="box-header with-border">
+          <div class="col-md-4 col-md-offset-4">
+              @include('messages.error')
+          </div>   
         <a href="{{route('instruments.create')}}" class="btn btn-primary col-md-offset-5">New Instrument Details</a>
         <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
@@ -25,7 +28,7 @@
               <i class="fa fa-minus"></i></button>
           </div>
         </div>
-        <div class="box-body">
+        <div  box-body">
           <div class="box box-info">
             <div class="box-header">
               <h3 class="box-title">Instrument Data</h3>
@@ -62,10 +65,10 @@
                   <td class="lightGrey">{{$instrument->due}}</td>
                   <td><a href="{{route('instruments.edit',$instrument->id)}}"><span class="glyphicon glyphicon-edit"></span></a></td>
                   <td>
-                  <form id="delete-form-{{$instrument->id}}" action="{{route('instruments.destroy',$instrument->id)}}" method="post" style="display:none">
-                    {{csrf_field()}}
-                    {{method_field('DELETE')}}
-                  </form>
+                      <form id="delete-form-{{$instrument->id}}" action="{{route('instruments.destroy',$instrument->id)}}" method="post" style="display:none">
+                          {{csrf_field()}}
+                          {{method_field('DELETE')}}
+                        </form>
                   <a href=""  onclick="
                   if(confirm('Are you sure, You Want to delete this?'))
                       {

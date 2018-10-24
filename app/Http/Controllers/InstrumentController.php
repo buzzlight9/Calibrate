@@ -65,7 +65,7 @@ class InstrumentController extends Controller
         $instrument->client = $request->client;
 
         $instrument->save();
-        return redirect(route('instruments.index'));
+        return redirect('/instruments')->with('success', 'Instrument Created');
     }
 
     /**
@@ -121,7 +121,7 @@ class InstrumentController extends Controller
         $instrument->receipt = $request->receipt;
 
         $instrument->save();
-        return redirect(route('instruments.index'));
+        return redirect('/instruments')->with('success','Instrument Updated');
     }
 
     /**
@@ -133,6 +133,6 @@ class InstrumentController extends Controller
     public function destroy($id)
     {
         instrument::where('id',$id)->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success','Instrument Deleted');
     }
 }
